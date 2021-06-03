@@ -3,7 +3,7 @@
 # descriptions:  the shell scripts will use ansible to deploy K8S at binary for siample
 
 # 传参检测
-[ $# -ne 6 ] && echo -e "Usage: $0 rootpasswd netnum nethosts cri cni k8s-cluster-name\nExample: bash $0 bogedevops 10.0.1 201\ 202\ 203\ 204 [containerd|docker] [calico|flannel] test\n" && exit 11 
+[ $# -ne 6 ] && echo -e "Usage: $0 rootpasswd netnum nethosts cri cni k8s-cluster-name\nExample: bash $0 bogedevops 192.168.253.131\ 132\ 132\ 134 [containerd|docker] [calico|flannel] test\n" && exit 11 
 
 # 变量定义
 export release=3.0.0
