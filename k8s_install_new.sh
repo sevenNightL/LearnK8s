@@ -44,16 +44,16 @@ if [ $? -ne 0 ];then
 fi
 
 # deploy机器设置pip安装加速源
-if [[ $clustername != 'aws' ]]; then
-mkdir ~/.pip
-cat > ~/.pip/pip.conf <<CB
-[global]
-index-url = https://mirrors.aliyun.com/pypi/simple
-[install]
-trusted-host=mirrors.aliyun.com
+#if [[ $clustername != 'aws' ]]; then
+#mkdir ~/.pip
+#cat > ~/.pip/pip.conf <<CB
+#[global]
+#index-url = https://mirrors.aliyun.com/pypi/simple
+#[install]
+#trusted-host=mirrors.aliyun.com
 
-CB
-fi
+#CB
+#fi
 
 
 # deploy机器安装相应软件包
