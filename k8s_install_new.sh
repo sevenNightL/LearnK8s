@@ -162,11 +162,11 @@ sed -ri "s+^(STORAGE_DIR:).*$+STORAGE_DIR: \"${CONTAINERD_STORAGE_DIR}\"+g" ${pw
 # kubelet logs dir
 KUBELET_ROOT_DIR="/var/lib/container/kubelet"
 sed -ri "s+^(KUBELET_ROOT_DIR:).*$+KUBELET_ROOT_DIR: \"${KUBELET_ROOT_DIR}\"+g" ${pwd}/clusters/${CLUSTER_NAME}/config.yml
-if [[ $clustername != 'aws' ]]; then
+#if [[ $clustername != 'aws' ]]; then
     # docker aliyun repo
-    REG_MIRRORS="https://pqbap4ya.mirror.aliyuncs.com"
-    sed -ri "s+^REG_MIRRORS:.*$+REG_MIRRORS: \'[\"${REG_MIRRORS}\"]\'+g" ${pwd}/clusters/${CLUSTER_NAME}/config.yml
-fi
+#    REG_MIRRORS="https://pqbap4ya.mirror.aliyuncs.com"
+#    sed -ri "s+^REG_MIRRORS:.*$+REG_MIRRORS: \'[\"${REG_MIRRORS}\"]\'+g" ${pwd}/clusters/${CLUSTER_NAME}/config.yml
+#fi
 # [docker]信任的HTTP仓库
 sed -ri "s+127.0.0.1/8+${netnum}.0/24+g" ${pwd}/clusters/${CLUSTER_NAME}/config.yml
 # disable dashboard auto install
